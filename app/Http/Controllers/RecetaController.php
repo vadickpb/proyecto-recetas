@@ -16,7 +16,7 @@ class RecetaController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth', ['except' => 'show'] );
         
     }
 
@@ -114,14 +114,14 @@ class RecetaController extends Controller
      */
     public function show(Receta $receta)
     {
-        //
+        return view('recetas.show', compact('receta'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Receta  $receta
-     * @return \Illuminate\Http\Response
+     * @return \Illumina;te\Http\Response
      */
     public function edit(Receta $receta)
     {
