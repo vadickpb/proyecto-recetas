@@ -6,7 +6,7 @@
     
 
         {{-- <h1>{{ $receta }}</h1> --}}
-   
+
 
     <article class="contenido-receta">
         <h1 class="text-center mb-4">{{ $receta->titulo }}</h1>
@@ -24,8 +24,8 @@
             </p>
 
             <p>
-                <span class="font-weight-bold text-primary">Autor:</span>
-                {{ $receta->autor->name }}
+                <a href="{{ route('perfiles.show',['perfil'=>$receta->autor->id]) }}"><span class="font-weight-bold text-primary">Autor:</span>
+                {{ $receta->autor->name }}</a> 
             </p>
 
             <p>
