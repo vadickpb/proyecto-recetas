@@ -5,9 +5,7 @@
 @endsection
 
 @section('botones')
-
 <a href="{{ route('recetas.index') }}" class="btn btn-primary mr-2">Volver</a>
-
 @endsection
 
 @section('content')
@@ -51,7 +49,7 @@
                         name="categoria" 
                         id="categoria" 
                         class="form-control @error('categoria') is-invalid @enderror"
-                         >
+                        >
 
                     <option value="">-- Seleccione --</option>
 
@@ -77,7 +75,7 @@
                 <label for="preparacion">Preparación</label>
                 <input type="hidden" name="preparacion" id="preparacion" value="{{ $receta->preparacion }}">
                 <trix-editor input="preparacion"
-                             class="form-control @error('preparacion') is-invalid @enderror"
+                            class="form-control @error('preparacion') is-invalid @enderror"
                 >{{ $receta->preparacion }}</trix-editor>
 
                 @error('preparacion')                  
